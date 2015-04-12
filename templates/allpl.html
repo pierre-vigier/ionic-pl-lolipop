@@ -1,0 +1,14 @@
+<ion-view view-title="All Playlists">
+  <ion-content>
+    <div class="card">
+        <ion-list>
+          <ion-item ng-repeat="playlist in playlists" href="#/app/playlists/{{playlist.id}}" class="item-icon-right">
+              <h2>{{playlist.title}}</h2>
+              <p>{{playlist.title}}</p>
+              <i class="icon ion-chevron-right positive"></i>
+          </ion-item>
+        </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
+

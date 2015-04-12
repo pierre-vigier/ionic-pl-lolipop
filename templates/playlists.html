@@ -1,0 +1,35 @@
+<ion-view view-title="Playlists">
+  <ion-content scroll="true" has-boucing="true" locking="true">
+    <ion-slide-box does-continue="true" auto-play="true">
+        <ion-slide>
+            <div style="height:180px;" class="balanced-bg">Balanced</div>
+        </ion-slide>
+        <ion-slide>
+            <div style="height:180px;" class="royal-bg">Royal</div>
+        </ion-slide>
+        <ion-slide>
+            <div style="height:180px;" class="energized-bg">Energized</div>
+        </ion-slide>
+    </ion-slide-box>
+    <div class="card list">
+        <div class="item item-divider">Title</div>
+        <div class="item">Header 1</div>
+        <div class="item">Header 2</div>
+    </div>
+    <div class="padding">
+        <button class="button button-positive button-block">One button</button>
+    </div>
+    <div class="card">
+        <ion-list>
+          <ion-item ng-repeat="playlist in playlists | limitTo : 3" href="#/app/playlists/{{playlist.id}}" class="item-icon-right">
+              <h2>{{playlist.title}}</h2>
+              <p>{{playlist.title}}</p>
+              <i class="icon ion-chevron-right positive"></i>
+          </ion-item>
+          <a class="item-divider item" href="#/app/allpl">
+            See all
+          </a>
+        </ion-list>
+    </div>
+  </ion-content>
+</ion-view>
